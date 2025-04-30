@@ -4,14 +4,16 @@ type TypingEffectProps = {
   text: string;
   speed?: number; // Optional typing speed in milliseconds
   Element: React.ElementType; // Optional element type for the text
-  AddNextState: () => void; // Function to call when typing is complete
+  handleAddNextState: () => void; // Function to call when typing is complete
+  className: string;
 };
 
 const TypingEffect: React.FC<TypingEffectProps> = ({
   text,
-  speed = 30,
+  speed = 10,
   Element,
-  AddNextState,
+  handleAddNextState,
+  className
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
@@ -21,17 +23,18 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
     const interval = setInterval(() => {
       if (index < text.length) {
         setDisplayedText((prev) => prev + text[index]);
+
         setIndex((prev) => prev + 1);
       } else {
         clearInterval(interval);
         clearInterval(cursorInterval);
         setShowCursor(false);
-        AddNextState();
+        handleAddNextState();
       }
     }, speed);
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev); // Toggle cursor visibility
-    }, 30);
+    }, speed);
 
     return () => {
       clearInterval(interval);
@@ -43,7 +46,7 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
     <Element
       className={`${
         Element === "h1" ? "text-3xl" : Element === "p" && ""
-      } font-bold text-gray-800 font-serif`}
+      }${className} font-bold text-gray-800 font-serif`}
     >
       {displayedText}
       {showCursor && <span className="w-[2px] h-full ">|</span>}
