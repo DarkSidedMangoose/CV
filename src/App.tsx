@@ -2,7 +2,7 @@ import { Fragment } from "react/jsx-runtime";
 import "./App.css";
 
 import PersonalInfo from "./components/Header";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Main from "./components/Main";
 import PersonalAdditionalInfo from "./components/PersonalAdditionalInfo";
 
@@ -13,13 +13,11 @@ function App() {
   const handleAddNextState = () => {
     setStateOfTypeEffects((prev) => prev + 1);
   };
-  const SidebarDatas = [
-    "General Info",
-    "Experience",
-    "Skills",
-    " Projects",
-    "Education",
-  ];
+ 
+  const handleAddNextStateOfSidebar = useCallback((index: number) => {
+    setStateOfSidebar(index);
+    console.log(index)
+  },[stateOfSidebar]);
   return (
     <div className="w-screen h-screen  grid grid-cols-[320px_1fr_320px]    gap-[2%] bg-white ">
       <PersonalInfo
@@ -31,7 +29,7 @@ function App() {
         stateOfSidebar={stateOfSidebar}
         handleAddNextState={handleAddNextState}
       />
-      <PersonalAdditionalInfo />
+      <PersonalAdditionalInfo sidebarState={handleAddNextStateOfSidebar} />
     </div>
   );
 }

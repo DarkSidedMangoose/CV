@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import TypingEffect from "./TypingEffectProps";
+import React from "react";
 import Photo from "../assets/IMG_1797.jpeg";
 import Phone from "../assets/phone.png";
 import Mail from "../assets/mail.png";
