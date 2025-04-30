@@ -3,6 +3,7 @@ import Photo from "../assets/IMG_1830.jpeg";
 import Phone from "../assets/phone.png";
 import Mail from "../assets/mail.png";
 import Location from "../assets/location.png";
+import Github from "../assets/github.png";
 
 
 const PersonalInfo: React.FC<{
@@ -18,11 +19,11 @@ const PersonalInfo: React.FC<{
           className="w-[200px] h-[200px] rounded-full object-cover object-top border-4 border-white "
         />
       </div>
-      <div className="w-full min-h-[170px] flex flex-col  ">
+      <div className="w-full min-h-[250px] flex flex-col  ">
         <h1 className="text-white font-bold text-md w-full flex justify-center border-b-2 border-white py-2 font-serif">
           CONTACT
         </h1>
-        <div className="w-full h-full  grid grid-rows-3 px-4 text-sm">
+        <div className="w-full h-full  grid grid-rows-4 px-4 text-sm">
           <div className="w-full h-full  flex  items-center gap-[5%] ">
             <img src={Phone} alt="phone" />
             <p className="text-white font-semibold">(+995) 591-68-84-52</p>
@@ -34,6 +35,12 @@ const PersonalInfo: React.FC<{
           <div className="w-full h-full  flex gap-[5%] items-center  ">
             <img src={Location} alt="location" />
             <p className="text-white font-semibold">Georgia,Tbilisi</p>
+          </div>
+          <div className="w-full h-full  flex gap-[5%] items-center  ">
+            <img src={Github} alt="Github" />
+            <p className="text-white font-semibold">
+              https://github.com/DarkSidedMangoose
+            </p>
           </div>
         </div>
       </div>
@@ -70,7 +77,6 @@ const PersonalInfo: React.FC<{
           </div>
         </div>
       </div> */}
-      
     </div>
   );
 };
