@@ -24,7 +24,7 @@ const Main: React.FC<{
     <div className="w-full h-full flex flex-col items-center py-5 gap-[5%]    ">
       <div className="w-3/4 h-auto  flex flex-col  justify-center  font-serif relative py-5">
         <div className="w-full">
-          <h1 className="text-[60px] font-thin ">
+          <h1 className="custom-1350:text-[60px] text-[50px] font-thin ">
             GIORGI <span className="font-thin text-[#163853]">TOPURIA</span>
           </h1>
           <h3 className="text-[17px] text-[#163853] font-semibold">
@@ -99,7 +99,6 @@ const Main: React.FC<{
                     />
                   </>
                 )}
-                
               </>
             ) : stateOfSidebar === 2 && state ? (
               <>

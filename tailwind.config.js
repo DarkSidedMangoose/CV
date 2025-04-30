@@ -6,6 +6,9 @@ module.exports = {
       spacing: {
         indent: "2rem",
       },
+      screens: {
+        "custom-1350": "1350px",
+      },
     },
   },
   plugins: [],

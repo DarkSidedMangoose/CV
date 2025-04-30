@@ -1,10 +1,9 @@
 import React from "react";
-import Photo from "../assets/IMG_1797.jpeg";
+import Photo from "../assets/IMG_1830.jpeg";
 import Phone from "../assets/phone.png";
 import Mail from "../assets/mail.png";
 import Location from "../assets/location.png";
-import MortalBoard from "../assets/mortarboard.png";
-import Diploma from "../assets/diploma.png";
+
 
 const PersonalInfo: React.FC<{
   handleAddNextState: () => void;
