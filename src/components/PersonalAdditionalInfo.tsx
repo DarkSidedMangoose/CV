@@ -21,11 +21,11 @@ const PersonalAdditionalInfo: React.FC<{
     [sidebarState]
   );
   return (
-    <div className="w-full h-full bg-[#163853] rounded-tl-xl rounded-bl-xl flex  text-white text-2xl justify-center items-center">
-      <div className="w-full h-1/2 flex flex-col font-semibold">
+    <div className="w-full h-auto bg-[#163853] rounded-tl-xl items-center rounded-bl-xl flex  text-white text-2xl justify-center py-5">
+      <div className="w-full h-auto bg-[#163853] flex flex-col font-semibold">
         {PersonalAdditionalInfoData.map((item, index) => (
           <div
-            className="w-full h-1/4 shadow-lg hover:opacity-60 flex cursor-pointer"
+            className="w-full min-h-[100px] shadow-lg hover:opacity-60 flex cursor-pointer"
             onClick={() => sidebarStateChange(index)}
             key={index}
           >
