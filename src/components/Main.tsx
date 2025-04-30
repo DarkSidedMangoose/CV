@@ -81,7 +81,7 @@ const Main: React.FC<{
                   <>
                     <h2>Clothe E-Commerce</h2>
                     <TypingEffect
-                      text={`I was building an e-commerce site for a clothing store (halted due to financial constraints)`}
+                      text={`I was building an e-commerce site for a clothing store (halted due to financial constraints).`}
                       Element={"p"}
                       className="indent-[2rem]"
                       handleAddNextState={handleAddNextStates}
@@ -112,7 +112,7 @@ const Main: React.FC<{
                   <>
                     <h2>School</h2>
                     <TypingEffect
-                      text={`I studied at 181 Public School, and i gradated it succesfully`}
+                      text={`I studied at 181 Public School, and i gradated it succesfully.`}
                       Element={"p"}
                       className="indent-[2rem]"
                       handleAddNextState={handleAddNextStates}
@@ -123,7 +123,7 @@ const Main: React.FC<{
                   <>
                     <h2>University</h2>
                     <TypingEffect
-                      text={`after that in 2017 I enrolled in university and graduated a degree in "Economics" at "Sokhumi State University", in 2022`}
+                      text={`after that in 2017 I enrolled in university and graduated a degree in "Economics" at "Sokhumi State University", in 2022.`}
                       Element={"p"}
                       className="indent-[2rem]"
                       handleAddNextState={handleAddNextStates}
@@ -134,7 +134,7 @@ const Main: React.FC<{
                   <>
                     <h2>College</h2>
                     <TypingEffect
-                      text={`In Parallel in 2019 i Was studying at "Gldani's College" and graduated a degree in "IT Networking"`}
+                      text={`In Parallel in 2019 i Was studying at "Gldani's College" and graduated a degree in "IT Networking".`}
                       Element={"p"}
                       className="indent-[2rem]"
                       handleAddNextState={handleAddNextStates}
@@ -144,7 +144,7 @@ const Main: React.FC<{
                 {typingEffectState >= 3 && (
                   <>
                     <TypingEffect
-                      text={`In Parallel in 2021 i Was studying at "IT step academy" faculty of "Cybersecurity" for 1 year but i had to leave it because of high tuition fees`}
+                      text={`In Parallel in 2021 i Was studying at "IT step academy" faculty of "Cybersecurity" for 1 year but i had to leave it because of high tuition fees.`}
                       Element={"p"}
                       className="indent-[2rem]"
                       handleAddNextState={handleAddNextStates}
@@ -155,7 +155,7 @@ const Main: React.FC<{
                   <>
                     <h2>Military</h2>
                     <TypingEffect
-                      text={`In 2023 i go to the Military and I have done my duty to my country`}
+                      text={`In 2023 i go to the Military and I have done my duty to my country.`}
                       Element={"p"}
                       className="indent-[2rem]"
                       handleAddNextState={handleAddNextStates}
@@ -194,7 +194,7 @@ const Main: React.FC<{
                       <h2>Speaking Languages</h2>
 
                       <TypingEffect
-                        text={`As for Languages: English(B2), Russian(A2), Georgian(Native)`}
+                        text={`As for Languages: English(B2), Russian(A2), Georgian(Native).`}
                         Element={"p"}
                         className="indent-[2rem]"
                         handleAddNextState={handleAddNextStates}
