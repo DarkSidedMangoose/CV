@@ -11,7 +11,7 @@ const PersonalInfo: React.FC<{
   stateOfTypeEffects: number;
 }> = ({ handleAddNextState, stateOfTypeEffects }) => {
   return (
-    <div className="w-full h-full flex  flex-col  bg-[#163853] gap-[2%]  px-[2%] relative shadow-lg rounded-br-xl rounded-tr-xl ">
+    <div className="w-full h-full flex  flex-col  bg-[#163853]   px-[2%] relative shadow-lg rounded-br-xl rounded-tr-xl ">
       <div className="w-full h-[300px] flex items-center   justify-center">
         <img
           src={Photo}
@@ -34,11 +34,11 @@ const PersonalInfo: React.FC<{
           </div>
           <div className="w-full h-full  flex gap-[5%] items-center  ">
             <img src={Location} alt="location" />
-            <p className="text-white font-semibold">Tbilisi,Mukhiani</p>
+            <p className="text-white font-semibold">Georgia,Tbilisi</p>
           </div>
         </div>
       </div>
-      <div className="w-full min-h-[200px] flex flex-col  ">
+      {/* <div className="w-full min-h-[200px] flex flex-col  ">
         <h1 className="text-white font-bold text-md w-full flex justify-center border-b-2 border-white py-2 font-serif">
           EDUCATION
         </h1>
@@ -70,7 +70,7 @@ const PersonalInfo: React.FC<{
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       
     </div>
   );

@@ -5,9 +5,16 @@ const Main: React.FC<{
   stateOfSidebar: number;
   handleAddNextState: () => void;
 }> = ({ stateOfSidebar, handleAddNextState }) => {
+    const [typingEffectState, setTypingEffectState] = useState<number>(0);
+  
+
+    const handleAddNextStates = () => {
+      setTypingEffectState((prev) => prev + 1);
+    }
   const [state, setState] = useState<boolean>(true)
   useEffect(() => {
     setState(false)
+    setTypingEffectState(0)
     setTimeout(() => {
       setState(true)
     },100)
@@ -29,21 +36,18 @@ const Main: React.FC<{
       <div className="w-full h-full grid grid-cols-1 grid-rows-1 px-[5%]   ">
         <div className="w-full h-full justify-center items-center flex flex-col gap-[5%]">
           <h1 className=" flex justify-center items-center text-[#163853]  font-bold text-xl font-serif ">
-            {
-
-              stateOfSidebar === 0
-                ? "About Me"
-                : stateOfSidebar === 1
-                ? "Experience"
-                : stateOfSidebar === 2
-                ? "Education"
-                : "Skills"
-            }
+            {stateOfSidebar === 0
+              ? "About Me"
+              : stateOfSidebar === 1
+              ? "Experience"
+              : stateOfSidebar === 2
+              ? "Education"
+              : "Skills"}
           </h1>
           <div className="w-full h-full text-lg text-[#163853] font-semibold overflow-y-auto max-h-[400px] ">
             {stateOfSidebar === 0 && state ? (
               <TypingEffect
-                text="Hello, My Name is Giorgi Topuria I'm Full-Stack Software Engineer.I am Self Educated Person and i am in that field almost 7 years already
+                text="Hello, My Name is Giorgi Topuria I was born on December 27, 2000. I'm  Full-Stack Software Engineer.I am Self Educated Person and i am in that field almost 7 years already
               I have a strong background in both front-end and back-end
               development, with expertise in technologies such as React, Asp.Net
               core 9(c#), and MongoDB. I am passionate about creating efficient
@@ -64,12 +68,52 @@ const Main: React.FC<{
               />
             ) : stateOfSidebar === 2 && state ? (
               <TypingEffect
-                text={`I studied at 181 Public School and am currently pursuing a degree in Economics at Sokhumi State University. Additionally, I completed my studies at Gldani's College, specializing in IT Networking. I also studied at IT Step Academy for one year, focusing on cybersecurity, but had to leave due to high tuition costs. Through self-study using books, YouTube videos, and Udemy courses, I learned frontend languages (HTML, CSS, JavaScript). Subsequently, I expanded my knowledge by learning React.js, Redux, and frameworks such as Framer Motion (for animations). I then explored Next.js and later began studying Node.js, driven by a personal project to develop a Word generator application based on custom options that produced Word files. When presenting this project to the Working Inspection team, they asked if I could create a complete system. I explained my capabilities with my current stack, but they required ASP.NET Core for the backend. Motivated by this challenge, I started learning ASP.NET Core and acquired significant skills. Although the system I developed remains unfinished, it includes numerous functionalities and demonstrates my knowledge in that field.`}
+                text={`I studied at 181 Public School after that i  I enrolled in university and graduated a degree in Economics at Sokhumi State University. Additionally, I completed my studies at Gldani's College, specializing in IT Networking. I also studied at IT Step Academy for one year, focusing on cybersecurity, but had to leave due to high tuition costs. after that i go to the Military and I have done my duty to my country. in parallel almost 7 year i'm studying Software engineering using books, YouTube videos, and Udemy courses, I learned frontend languages (HTML, CSS, JavaScript). Subsequently, I expanded my knowledge by learning React.js, Redux, and frameworks such as Framer Motion (for animations). I then explored Next.js and later began studying Node.js, driven by a personal project to develop a Word generator application based on custom options that produced Word files. When presenting this project to the Working Inspection team, they asked if I could create a complete system. I explained my capabilities with my current stack, but they required ASP.NET Core for the backend. Motivated by this challenge, I started learning ASP.NET Core and acquired significant skills. Although the system I developed remains unfinished, it includes numerous functionalities and demonstrates my knowledge in that field.`}
                 Element={"p"}
                 className="indent-[2rem]"
                 handleAddNextState={handleAddNextState}
               />
-            ) : null}
+            ) : (
+              stateOfSidebar === 3 &&
+              state && (
+                <>
+                  {typingEffectState >= 0 && (
+                    <>
+                    <h2>Programming Skills</h2>
+                    <TypingEffect
+                      text={`In Software Engineering, I have a lot of knowledge which includes: React.js, Redux, Framer Motion, Next.js, Node.js, ASP.NET Core (C#), MongoDB, Express.js, HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, TypeScript, GitHub, Postman, Figma, MySQL, Redis, and JWT.`}
+                      Element={"p"}
+                      className="indent-[2rem]"
+                      handleAddNextState={handleAddNextStates}
+                    />
+                    </>
+                  )}
+                  {typingEffectState >= 1 && (
+                    <>
+                    <h2>Speaking Languages</h2>
+
+                    <TypingEffect
+                      text={`As for Languages: English(B2), Russian(A2), Georgian(Native)`}
+                      Element={"p"}
+                      className="indent-[2rem]"
+                      handleAddNextState={handleAddNextStates}
+                      />
+                      </>
+                  )}
+                  {typingEffectState >= 2 && (
+                    <>
+                    <h2>Other Skills</h2>
+                    <TypingEffect
+                      text={`Also i have Some knowledge in IT Field such as Networking, Cybersecurity, and Linux.`}
+                      Element={"p"}
+                      className="indent-[2rem]"
+                      handleAddNextState={handleAddNextStates}
+                    />
+                    </>
+                  )}
+                </>
+              )
+            )}
           </div>
         </div>
       </div>
