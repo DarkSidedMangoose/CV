@@ -10,7 +10,7 @@ type TypingEffectProps = {
 
 const TypingEffect: React.FC<TypingEffectProps> = ({
   text,
-  speed = 20,
+  speed = 15,
   Element,
   handleAddNextState,
   className

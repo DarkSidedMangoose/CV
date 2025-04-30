@@ -44,7 +44,7 @@ const Main: React.FC<{
               ? "Education"
               : "Skills"}
           </h1>
-          <div className="w-full h-full text-lg text-[#163853] font-semibold overflow-y-auto max-h-[500px] ">
+          <div className="w-full h-full text-lg text-[#163853] font-semibold overflow-y-auto max-h-[450px] ">
             {stateOfSidebar === 0 && state ? (
               <TypingEffect
                 text="Hello, My Name is Giorgi Topuria I was born on December 27, 2000. I'm  Full-Stack Software Engineer.I am Self Educated Person and i am in that field almost 7 years already
