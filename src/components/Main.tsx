@@ -14,7 +14,7 @@ const Main: React.FC<{
     console.log(stateOfSidebar)
   },[stateOfSidebar])
   return (
-    <div className="w-full h-full flex flex-col items-center py-5 gap-[5%]   ">
+    <div className="w-full h-full flex flex-col items-center py-5 gap-[5%]    ">
       <div className="w-3/4 h-auto  flex flex-col  justify-center  font-serif relative py-5">
         <div className="w-full">
           <h1 className="text-[60px] font-thin ">
@@ -26,7 +26,7 @@ const Main: React.FC<{
           <div className="absolute left-0 bottom-0 w-[5%] min-w-[60px] bg-[#163853] h-[3%] rounded-sm"></div>
         </div>
       </div>
-      <div className="w-full h-full grid grid-cols-1 grid-rows-1 px-[5%]  ">
+      <div className="w-full h-full grid grid-cols-1 grid-rows-1 px-[5%]   ">
         <div className="w-full h-full justify-center items-center flex flex-col gap-[5%]">
           <h1 className=" flex justify-center items-center text-[#163853]  font-bold text-xl font-serif ">
             {
@@ -40,7 +40,7 @@ const Main: React.FC<{
                 : "Skills"
             }
           </h1>
-          <div className="w-full h-full text-lg text-[#163853] font-semibold ">
+          <div className="w-full h-full text-lg text-[#163853] font-semibold overflow-y-auto max-h-[400px] ">
             {stateOfSidebar === 0 && state ? (
               <TypingEffect
                 text="Hello, My Name is Giorgi Topuria I'm Full-Stack Software Engineer.I am Self Educated Person and i am in that field almost 7 years already
@@ -50,7 +50,7 @@ const Main: React.FC<{
               and scalable web applications that provide a seamless user
               experience. I am always eager to learn new technologies and
               improve my skills to stay up-to-date with the latest trends in the
-              software development industry. I am hard worker i have a great sense of responsibility and i trust planning and execution. I know that i have a lots of thing to learn to be best of the best in that field but i know effort and hard working will move the mountains "
+              software development industry. I am hard worker i have a great sense of responsibility and i trust planning and execution. I know that i have a lots of thing to learn to be best of the best in that field but i know effort and hard working will move the mountains. "
                 Element={"p"}
                 className="indent-[2rem]"
                 handleAddNextState={handleAddNextState}
